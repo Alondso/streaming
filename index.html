@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Manga</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Streaming Manga</a>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="https://alondso.github.io/OnePiece/">One Pice</a></li>
+                    <li><a href="#">Baki</a></li>
+                    <li><a href="#">Dragon Ball</a></li>
+                    <li><a href="#">Naruto</a></li>
+                    <li><a href="#">Ippo</a></li>
+                </ul>
+            </div>
+            <img src="image/menu-btn.png" alt="menu-hamburger" class="menu-hamburger">
+        </nav>
+        
+        <section id="imagePrincipale">
+            <h1>Streaming Manga</h1>
+            <div id="premierTrait"></div>
+            <h3>Site de streaming pour plusieurs animer</h3>
+
+            <video width="320" height="240" controls>
+                <source src="video/jujutsuep1.mp4" type="video/mp4">
+                <source src="video/jujutsuep1.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+
+    </header>
+
+</body>
+</html>
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/**************************************NAVBAR**************************************/
+.header .navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: aliceblue;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}
+/**************************IMAGE PRINCIPALE****************************/
+#imagePrincipale {
+    background-image: linear-gradient(hsl(0, 82%, 57%), #a49f0b);
+    height: 1200px;
+    padding-top: 60px;
+    background-size: cover;
+}  
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 6em;
+    margin-top: 100px;
+
+}
+
+#premierTrait {
+    height: 2px;
+    width: 25%;
+    margin: auto;
+    background-color: #fffae1;
+    box-shadow: 1px 3px 2px black;
+ }
+
+ h3 {
+    margin: 3px;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px black;
+ }
+
+
+
+@media screen and (max-width: 10000px)  {
+    .navbar {
+        padding: 0;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+    .navbar .menu-hamburger {
+        display: block;
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(225, 225, 225, 0.20);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }  
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.4em;
+    }
+
+    #imagePrincipale {
+    height: 790px;
+    padding-top: 60px;
+    background-size: cover;
+    }  
+
+    h1 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;
+    margin-top: 100px;
+    }
+
+    #imagePrincipale {
+    background-image: linear-gradient(hsl(0, 82%, 57%), #a49f0b);
+    height: 900px;
+    padding-top: 60px;
+    background-size: cover;
+    }  
+}
+
+
+</style>
